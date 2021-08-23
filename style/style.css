@@ -1,15 +1,23 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+}
+
+html {
+  background-color: #2c2e3d;
 }
 
 body {
-  text-align: center;
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .container {
@@ -102,7 +110,7 @@ body {
   }
 }
 
-.navbar {
+.header {
   background-color: #2c2e3d;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
@@ -113,62 +121,62 @@ body {
   z-index: 9999;
 }
 
-.navbar a,
-.navbar i {
+.header a,
+.header i {
   color: #99a9b5;
 }
 
-.navbar-logo, .navbar-list {
+.header-logo, .header-menu {
   margin: 30px 0;
 }
 
-.navbar-logo {
+.header-logo {
   float: left;
 }
 
-.navbar-list {
+.header-menu {
   float: right;
 }
 
-.navbar-list > li {
+.header-menu > li {
   display: inline-block;
   line-height: 40px;
   list-style: none;
 }
 
-.navbar-list > li > a {
+.header-menu > li > a {
   text-transform: uppercase;
   text-decoration: none;
 }
 
-.navbar-item {
+.header-item {
   padding: 10px 15px;
 }
 
-.navbar-item:hover {
+.header-item:hover {
   border: 1px solid white;
   color: #00bcd4;
 }
 
-.navbar-icon {
+.header-icon {
   margin: 0 5px;
 }
 
-.navbar-icon > a {
+.header-icon > a {
   color: #99a9b5;
 }
 
-.navbar-icon:last-child {
+.header-icon:last-child {
   position: relative;
   margin-right: 0;
 }
 
-.navbar-icon:last-child label {
+.header-icon:last-child label {
   color: white !important;
   font-weight: normal;
 }
 
-.navbar-markpagenumber {
+.header-markpagenumber {
   position: absolute;
   top: -4px;
   left: 2px;
@@ -176,7 +184,7 @@ body {
   text-align: center;
 }
 
-.navbar-checkbtn {
+.header-checkbtn {
   font-size: 30px;
   float: right;
   line-height: 100px;
@@ -184,15 +192,15 @@ body {
   display: none;
 }
 
-.navbar #check {
+.header #check {
   display: none;
 }
 
 @media screen and (max-width: 1023px) {
-  .navbar-checkbtn {
+  .header-checkbtn {
     display: block;
   }
-  .navbar-list {
+  .header-menu {
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -204,56 +212,56 @@ body {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
-  .navbar-list > li {
+  .header-menu > li {
     display: block;
     border-bottom: 1px solid #99a9b5;
     line-height: 40px;
   }
-  .navbar-list > li:first-child {
+  .header-menu > li:first-child {
     border-top: 1px solid #99a9b5;
   }
-  .navbar-list > li > a {
+  .header-menu > li > a {
     display: block;
   }
-  .navbar-list > li > a:hover {
+  .header-menu > li > a:hover {
     border: none;
   }
-  .navbar-item:hover {
+  .header-item:hover {
     background: none;
     color: #0082e6;
   }
-  .navbar #check:checked ~ ul {
+  .header #check:checked ~ ul {
     right: 0;
   }
-  .navbar-markpage > img {
+  .header-markpage > img {
     display: none;
   }
-  .navbar-markpage::before {
+  .header-markpage::before {
     content: "page number :";
     text-transform: uppercase;
   }
-  .navbar-markpagenumber {
+  .header-markpagenumber {
     position: inherit;
   }
-  .navbar-search::before {
+  .header-search::before {
     content: "search";
     text-transform: uppercase;
   }
-  .navbar-search i {
+  .header-search i {
     display: none;
   }
-  .navbar-cart::before {
+  .header-cart::before {
     content: "Your cart ";
     text-transform: uppercase;
   }
-  .navbar-cart img {
+  .header-cart img {
     display: none;
   }
-  .navbar-language::before {
+  .header-language::before {
     content: "Langguage:";
     text-transform: uppercase;
   }
-  .navbar-icon {
+  .header-icon {
     padding: 10px 15px;
   }
 }
