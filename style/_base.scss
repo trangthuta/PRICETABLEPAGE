@@ -7,7 +7,6 @@ html{
   background-color: $bg-dark-header;
 }
 body {
-  width: 100%;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   box-sizing: border-box;
@@ -37,8 +36,7 @@ body {
 }
 .button-properties {
   font-size: 19px;
-  padding: 10.5px 0;
-  width: 226px;
+  padding: 10.5px 25px;
   border-radius: 30px;
   background-color: $bg-dark-header;
   border-width: 3px;
@@ -82,8 +80,8 @@ body {
     gap: 10px 0;
   }
   .button-properties {
-    width: 150px;
     font-size: 12px;
+    padding: 10px 15px;
   }
 }
 
