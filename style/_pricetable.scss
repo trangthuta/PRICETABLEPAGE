@@ -1,0 +1,122 @@
+.pricetable {
+  padding: 192px 0 160px 0;
+  background-color: $bg-tableprice;
+  &-col {
+    width: 261px;
+    max-height: 780px;
+    &-header {
+      background-color: $gray-lighter;
+      width: 100%;
+      padding: 30px 0 25px 0;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      .block-hover {
+        display: none;
+        &-subtitle1 {
+          font-size: 24px;
+          color: white;
+          padding-bottom: 12px;
+          font-weight: normal;
+        }
+        &-subtitle2 {
+          font-size: 14px;
+          color: $gray-lighter;
+        }
+      }
+      .circle-price {
+        width: 100%;
+        &-content {
+          border: 5px solid #00bcd4;
+          width: 160px;
+          height: 160px;
+          border-radius: 50%;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          color: #b6c6c9;
+          p:first-child {
+            font-family: $secondary-font;
+            font-weight: 700;
+            font-size: 42px;
+            font-weight: 700;
+            height: 60%;
+            transform: translateY(40%);
+            color: white;
+          }
+        }
+        &-month {
+          font-size: 24px;
+          font-weight: 700;
+          color: white;
+          font-family: $secondary-font;
+          letter-spacing: 3px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    &-rowsubtile {
+      background-color: #fff;
+      .content-table {
+        li {
+          list-style: none;
+          line-height: 50px;
+          color: #5f727f;
+        }
+        li:not(li:last-child) {
+          border-bottom: 1px solid #f0f3f2;
+        }
+      }
+    }
+    &-btnorder {
+      background-color: #fff;
+      padding: 25px 0 50px 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      button {
+        line-height: 40px;
+        width: 119px;
+        height: 40px;
+        background-color: #393d50;
+        color: white;
+        border: 1px solid #393d50;
+        font-family: $secondary-font;
+        font-weight: 700;
+        letter-spacing: 4px;
+      }
+    }
+    &:hover {
+      margin-top: -110px;
+      cursor: pointer;
+    }
+    &:hover .block-hover {
+      display: block;
+      padding-bottom: 20px;
+    }
+    &:hover .circle-price-message {
+      display: block;
+    }
+    &:hover &-header {
+      background-color: $blue-dark;
+    }
+    &:hover &-btnorder > button {
+      background-color: white;
+      color: $blue-color;
+      border: 4px solid $blue-color;
+      margin-bottom: 22px;
+    }
+  }
+  @media screen and(max-width: 1073px) {
+    &-col:nth-child(4) {
+      margin-top: 50px !important;
+    }
+  }
+  @media screen and(max-width: 1023px) {
+    &-col:nth-child(3) {
+      margin-top: 50px !important;
+    }
+  }
+  @media screen and( max-width:767px) {
+    &-col:nth-child(2) {
+      margin-top: 50px !important;
+    }
+  }
+}
