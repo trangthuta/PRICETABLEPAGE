@@ -149,6 +149,7 @@ body {
 
 .header-item {
   padding: 10px 15px;
+  text-transform: uppercase;
 }
 
 .header-item:hover {
