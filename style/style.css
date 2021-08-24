@@ -455,16 +455,11 @@ body {
   color: #5f727f;
 }
 
-.pricetable-col-header .circle-price {
-  width: 100%;
-}
-
 .pricetable-col-header .circle-price-content {
   border: 5px solid #00bcd4;
-  width: 160px;
-  height: 160px;
+  padding: 39px  0;
+  margin: 0 50.5px;
   border-radius: 50%;
-  margin: 0 auto;
   margin-bottom: 20px;
   color: #b6c6c9;
 }
@@ -474,9 +469,6 @@ body {
   font-weight: 700;
   font-size: 42px;
   font-weight: 700;
-  height: 60%;
-  -webkit-transform: translateY(40%);
-          transform: translateY(40%);
   color: white;
 }
 
@@ -511,9 +503,7 @@ body {
 }
 
 .pricetable-col-btnorder button {
-  line-height: 40px;
-  width: 119px;
-  height: 40px;
+  padding: 14.5px 14px;
   background-color: #393d50;
   color: white;
   border: 1px solid #393d50;
@@ -525,6 +515,8 @@ body {
 .pricetable-col:hover {
   margin-top: -110px;
   cursor: pointer;
+  -webkit-transition: width 2s;
+  transition: width 2s;
 }
 
 .pricetable-col:hover .block-hover {
@@ -532,7 +524,7 @@ body {
   padding-bottom: 20px;
 }
 
-.pricetable-col:hover .circle-price-message {
+.pricetable-col .circle-price-message {
   display: block;
 }
 
@@ -544,7 +536,6 @@ body {
   background-color: white;
   color: #00bcd4;
   border: 4px solid #00bcd4;
-  margin-bottom: 22px;
 }
 
 @media screen and (max-width: 1073px) {
