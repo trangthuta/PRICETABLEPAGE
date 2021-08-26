@@ -265,7 +265,7 @@ body {
 }
 
 .slider {
-  padding: 130px 0 42px 0;
+  padding: 230px 0 42px 0;
   color: white;
   position: relative;
 }
@@ -284,6 +284,7 @@ body {
 .slider-content {
   font-size: 24px;
   line-height: 40px;
+  margin-bottom: 40px;
 }
 
 .slider-button {
