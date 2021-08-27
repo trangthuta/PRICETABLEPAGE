@@ -821,8 +821,8 @@ body {
   background-color: #394050;
 }
 
-.infopage-dot input[type="radio"]:checked + label::after {
-  background-color: #99a9b5;
+.infopage-dot-active::after {
+  background-color: #99a9b5 !important;
 }
 
 .infopage-nextemail {

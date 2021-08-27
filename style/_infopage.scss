@@ -25,7 +25,6 @@
     border-right: 10px solid transparent;
     transform: translate(200%, 100%);
   }
-
   &-col {
     max-width: 261px;
     height: 705px;
@@ -159,8 +158,10 @@
         background-color: #394050;
       }
     }
-    input[type="radio"]:checked + label::after {
-      background-color: $gray-light;
+    &-active {
+      &::after {
+        background-color: $gray-light !important;
+      }
     }
   }
   &-nextemail {
