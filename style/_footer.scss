@@ -71,15 +71,13 @@
   @media screen and (max-width: 767px) {
     &-icon {
       width: 100%;
+      display: inline-flex;
+      justify-content: center;
     }
     &-list {
       ul > li {
         padding: 0 6px;
       }
-    }
-    &-icon{
-      display: flex;
-      justify-content: center;
     }
   }
 }
