@@ -98,9 +98,6 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .container-flex {
-    gap: 10px 0;
-  }
   .button-properties {
     font-size: 12px;
     padding: 10px 15px;
@@ -993,6 +990,14 @@ body {
   }
   .footer-list ul > li {
     padding: 0 6px;
+  }
+  .footer-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
