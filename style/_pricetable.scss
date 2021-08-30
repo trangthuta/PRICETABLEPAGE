@@ -5,14 +5,21 @@
     width: 261px;
     height: 780px;
     margin-bottom: 110px;
+    position: relative;
     &-header {
       background-color: $gray-lighter;
       width: 100%;
-      padding: 30px 0 25px 0;
+      padding-top: 30px;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       .block-hover {
-        display: none;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding-top: 20px;
         &-subtitle1 {
           font-size: 24px;
           color: white;
@@ -22,11 +29,12 @@
         &-subtitle2 {
           font-size: 14px;
           color: $gray-lighter;
+          opacity: 0;
         }
       }
       .circle-price {
         &-content {
-          border: 5px solid #00bcd4;
+          border: 5px solid $blue-color;
           padding: 39px 0;
           margin: 0 50.5px;
           border-radius: 50%;
@@ -52,11 +60,13 @@
     }
     &-rowsubtile {
       background-color: #fff;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
       .content-table {
         li {
           list-style: none;
           line-height: 50px;
-          color: #5f727f;
+          color: $gray-lighter;
         }
         li:not(li:last-child) {
           border-bottom: 1px solid #f0f3f2;
@@ -70,23 +80,29 @@
       border-bottom-right-radius: 10px;
       button {
         padding: 14.5px 14px;
-        background-color: #393d50;
+        background-color: $blue-dark;
         color: white;
-        border: 1px solid #393d50;
+        border: 1px solid $blue-dark;
         font-family: $secondary-font;
         font-weight: 700;
         letter-spacing: 4px;
+        border: 4px solid transparent;
       }
     }
-    &:hover {
-      margin-top: -110px;
-      transform: scale(1.1);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      .block-hover {
-        display: block;
-        padding-bottom: 20px;
-      }
+    &:hover .circle-price {
+      height: 100%;
+      transform: translateY(-10%);
+      transition: transform 1s;
+      background: $blue-dark;
+    }
+    &:hover .block-hover-subtitle2 {
+      opacity: 1;
+    }
+    &:hover .block-hover {
+      transform: translateY(-100%);
+      transition: transform 1s;
+      opacity: 1;
+      background-color: $blue-dark;
     }
     .circle-price-message {
       display: block;
@@ -94,10 +110,15 @@
     &:hover &-header {
       background-color: $blue-dark;
     }
-    &:hover &-btnorder > button {
-      background-color: white;
-      color: $blue-color;
-      border: 4px solid $blue-color;
+    &:hover &-btnorder {
+      transform: translateY(20px);
+      transition: transform 1s;
+      & > button {
+        border: 4px solid transparent;
+        background-color: white;
+        color: $blue-color;
+        border-color: $blue-color;
+      }
     }
   }
 }
