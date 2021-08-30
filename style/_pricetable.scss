@@ -3,7 +3,7 @@
   background-color: $bg-tableprice;
   &-col {
     width: 261px;
-    max-height: 780px;
+    height: 780px;
     &-header {
       background-color: $gray-lighter;
       width: 100%;
@@ -79,8 +79,9 @@
     }
     &:hover {
       margin-top: -110px;
+      transform: translateY(-10px);
       cursor: pointer;
-      transition: width 2s;
+      transition: all 1s;
     .block-hover {
       display: block;
       padding-bottom: 20px;

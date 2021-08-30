@@ -427,7 +427,7 @@ body {
 
 .pricetable-col {
   width: 261px;
-  max-height: 780px;
+  height: 780px;
 }
 
 .pricetable-col-header {
@@ -513,9 +513,11 @@ body {
 
 .pricetable-col:hover {
   margin-top: -110px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
   cursor: pointer;
-  -webkit-transition: width 2s;
-  transition: width 2s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .pricetable-col:hover .block-hover {
