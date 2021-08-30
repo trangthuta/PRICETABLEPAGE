@@ -1,9 +1,10 @@
 .pricetable {
-  padding: 192px 0 160px 0;
+  padding: 192px 0 50px 0;
   background-color: $bg-tableprice;
   &-col {
     width: 261px;
     height: 780px;
+    margin-bottom: 110px;
     &-header {
       background-color: $gray-lighter;
       width: 100%;
@@ -26,7 +27,7 @@
       .circle-price {
         &-content {
           border: 5px solid #00bcd4;
-          padding: 39px  0;
+          padding: 39px 0;
           margin: 0 50.5px;
           border-radius: 50%;
           margin-bottom: 20px;
@@ -68,7 +69,7 @@
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       button {
-        padding:14.5px 14px;
+        padding: 14.5px 14px;
         background-color: #393d50;
         color: white;
         border: 1px solid #393d50;
@@ -79,14 +80,14 @@
     }
     &:hover {
       margin-top: -110px;
-      transform: translateY(-10px);
+      transform: scale(1.1);
       cursor: pointer;
-      transition: all 1s;
-    .block-hover {
-      display: block;
-      padding-bottom: 20px;
+      transition: all 0.3s ease;
+      .block-hover {
+        display: block;
+        padding-bottom: 20px;
+      }
     }
-  }
     .circle-price-message {
       display: block;
     }
@@ -97,21 +98,6 @@
       background-color: white;
       color: $blue-color;
       border: 4px solid $blue-color;
-    }
-  }
-  @media screen and(max-width: 1073px) {
-    &-col:nth-child(4) {
-      margin-top: 50px !important;
-    }
-  }
-  @media screen and(max-width: 1023px) {
-    &-col:nth-child(3) {
-      margin-top: 50px !important;
-    }
-  }
-  @media screen and( max-width:767px) {
-    &-col:nth-child(2) {
-      margin-top: 50px !important;
     }
   }
 }

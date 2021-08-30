@@ -421,13 +421,14 @@ body {
 }
 
 .pricetable {
-  padding: 192px 0 160px 0;
+  padding: 192px 0 50px 0;
   background-color: #3c3a43;
 }
 
 .pricetable-col {
   width: 261px;
   height: 780px;
+  margin-bottom: 110px;
 }
 
 .pricetable-col-header {
@@ -456,7 +457,7 @@ body {
 
 .pricetable-col-header .circle-price-content {
   border: 5px solid #00bcd4;
-  padding: 39px  0;
+  padding: 39px 0;
   margin: 0 50.5px;
   border-radius: 50%;
   margin-bottom: 20px;
@@ -513,11 +514,11 @@ body {
 
 .pricetable-col:hover {
   margin-top: -110px;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   cursor: pointer;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .pricetable-col:hover .block-hover {
@@ -537,24 +538,6 @@ body {
   background-color: white;
   color: #00bcd4;
   border: 4px solid #00bcd4;
-}
-
-@media screen and (max-width: 1073px) {
-  .pricetable-col:nth-child(4) {
-    margin-top: 50px !important;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .pricetable-col:nth-child(3) {
-    margin-top: 50px !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .pricetable-col:nth-child(2) {
-    margin-top: 50px !important;
-  }
 }
 
 .slide-dark {
