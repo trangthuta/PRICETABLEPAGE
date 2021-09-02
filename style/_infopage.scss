@@ -140,7 +140,7 @@
     font-family: $secondary-font;
     font-weight: 700;
   }
-  &-dot {
+  &-dots {
     width: 100%;
     text-align: center;
     label {
@@ -158,10 +158,10 @@
         background-color: #394050;
       }
     }
-    &-active {
-      &::after {
-        background-color: $gray-light !important;
-      }
+  }
+  &-active {
+    &::after {
+      background-color: $gray-light !important;
     }
   }
   &-nextemail {
@@ -216,5 +216,16 @@
   }
   .color-7 {
     background-color: #dfe5e8;
+  }
+  ///slide-show
+  &-slides {
+    display: none;
+    &-item {
+      display: inline-block;
+      margin-bottom: 2px;
+      &:nth-child(5) {
+        margin: 0 7.3px;
+      }
+    }
   }
 }
