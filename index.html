@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PRICE TABLES PAGE</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Source+Sans+Pro:wght@300;400&display=swap"
     rel="stylesheet" />
@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
   <header class="header">
     <div class="container">
       <input type="checkbox" id="check" />
@@ -54,47 +55,96 @@
       </nav>
     </div>
   </header>
-
   <section class="slider text-center">
     <span class="slider-arrowslide arrleft">
-      <i class="fas fa-arrow-left slider-arrow "></i>
+      <i class="fas fa-arrow-left slider-arrow " onclick="plusSlide(-1)"></i>
     </span>
     <span class="slider-arrowslide arright">
-      <i class="fas fa-arrow-right slider-arrow"></i>
+      <i class="fas fa-arrow-right slider-arrow" onclick="plusSlide(1)"></i>
     </span>
-    <section class="container">
-      <a href="#">
-        <i class="fas fa-bars slider-iconbar"></i>
-      </a>
-      <h1 class="slider-title subtitle-big">
-        PRICING
-        <strong> TABLES </strong>
-      </h1>
-      <p class="slider-content subtitle-small">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea
-      </p>
-      <div class="slider-button">
-        <button class=" button-properties btnleft">
-          PURCHASE NOW
-        </button>
-        <button class=" button-properties btnright">
-          MORE DETAILS
-        </button>
+    <div class=" container">
+      <div class="mySlides">
+        <a href="#">
+          <i class="fas fa-bars slider-iconbar"></i>
+        </a>
+        <h1 class="slider-title subtitle-big">
+          PRICING
+          <strong> TABLES 1</strong>
+        </h1>
+        <p class="slider-content subtitle-small">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea
+        </p>
+        <div class="slider-button">
+          <button class=" button-properties btnleft">
+            PURCHASE NOW
+          </button>
+          <button class=" button-properties btnright">
+            MORE DETAILS
+          </button>
+        </div>
       </div>
-      <div class="btn-dot slider-dot">
-        <input type="radio" name="rdo-btn" id="rdo-btn1" />
-        <label for="rdo-btn1" class="active"></label>
-        <input type="radio" name="rdo-btn" id="rdo-btn2" />
-        <label for="rdo-btn2"></label>
-        <input type="radio" name="rdo-btn" id="rdo-btn3" />
-        <label for="rdo-btn3"></label>
-      </div>
-    </section>
-  </section>
 
+      <div class="mySlides">
+        <a href="#">
+          <i class="fas fa-bars slider-iconbar"></i>
+        </a>
+        <h1 class="slider-title subtitle-big">
+          PRICING
+          <strong> TABLES 2 </strong>
+        </h1>
+        <p class="slider-content subtitle-small">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea
+        </p>
+        <div class="slider-button">
+          <button class=" button-properties btnleft" style="color:#00bcd4;border-color:#00bcd4">
+            PURCHASE NOW
+          </button>
+          <button class=" button-properties btnright" style="color:white;border-color:white">
+            MORE DETAILS
+          </button>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <a href="#">
+          <i class="fas fa-bars slider-iconbar"></i>
+        </a>
+        <h1 class="slider-title subtitle-big">
+          PRICING
+          <strong> TABLES 3 </strong>
+        </h1>
+        <p class="slider-content subtitle-small">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea
+        </p>
+        <div class="slider-button">
+          <button class=" button-properties btnleft" style="color:#00bcd4;border-color:#00bcd4">
+            PURCHASE NOW
+          </button>
+          <button class=" button-properties btnright" style="color:#00bcd4;border-color:#00bcd4">
+            MORE DETAILS
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="btn-dot slider-dot">
+      <input type="radio" name="rdo-btn" id="rdo-btn1" />
+      <label for="rdo-btn1" class="dot" onclick="currentSlide(1)"></label>
+      <input type="radio" name="rdo-btn" id="rdo-btn2" />
+      <label for="rdo-btn2" class="dot" onclick="currentSlide(2)"></label>
+      <input type="radio" name="rdo-btn" id="rdo-btn3" />
+      <label for="rdo-btn3" class="dot" onclick="currentSlide(3)"></label>
+    </div>
+
+  </section>
   <section class="content text-center">
     <div class="container">
       <h2 class="content-title subtitle-big">
@@ -290,211 +340,227 @@
 
   <div class="infopage">
     <div class="container container-flex">
-        <div class="infopage-col">
-          <div class="infopage-colflex">
-            <div class="infopage-item">
-              <img src="./img/Logo_Strokes.png" class="infopage-logo" />
+      <div class="infopage-col">
+        <div class="infopage-colflex">
+          <div class="infopage-item">
+            <img src="./img/Logo_Strokes.png" class="infopage-logo" />
+            <p>
+              Lorem Ipsum.Proin gravida nibh vel velitauctor aliquet.Aenean
+              sollicitudin ,lorem quis bibendum auctor ,nisi elit consequat
+              ipsum, nec sagittis sem nibh id elit .Duis sed odio sit amet
+              nibh
+            </p>
+          </div>
+          <div class="infopage-item">
+            <h3 class="infopage-tit">CONTACT</h3>
+            <div class="infopage-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span class="infopage-contact"> Address: </span>
+              <p>908 New Hampshire Avenue Northwest #100, Washington, DC</p>
+              <p>20037, United State</p>
+            </div>
+            <div class="infopage-PM">
               <p>
-                Lorem Ipsum.Proin gravida nibh vel velitauctor aliquet.Aenean
-                sollicitudin ,lorem quis bibendum auctor ,nisi elit consequat
-                ipsum, nec sagittis sem nibh id elit .Duis sed odio sit amet
-                nibh
+                <i class="fas fa-headphones"></i>
+                <span class="infopage-contact">
+                  Phone: +1 916-875-2235
+                </span>
               </p>
-            </div>
-            <div class="infopage-item">
-              <h3 class="infopage-tit">CONTACT</h3>
-              <div class="infopage-address">
+              <p>
                 <i class="fas fa-map-marker-alt"></i>
-                <span class="infopage-contact"> Address: </span>
-                <p>908 New Hampshire Avenue Northwest #100, Washington, DC</p>
-                <p>20037, United State</p>
-              </div>
-              <div class="infopage-PM">
-                <p>
-                  <i class="fas fa-headphones"></i>
-                  <span class="infopage-contact">
-                    Phone: +1 916-875-2235
-                  </span>
-                </p>
-                <p>
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span class="infopage-contact"> Fax: +1 916-875-2235 </span>
-                </p>
-                <p>
-                  <i class="far fa-envelope"></i>
-                  <span class="infopage-contact">
-                    Email:
-                    <a href="#">info@domain.ltd</a>
-                  </span>
-                </p>
-                <p>
-                  <i class="fas fa-globe"></i>
-                  <span class="infopage-contact">
-                    Website:
-                    <a href="#"> www.codex-themes.com </a>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="infopage-col">
-          <div class="infopage-colflex">
-            <div class="infopage-item">
-              <h3 class="infopage-tit">RECENT POST</h3>
-              <div class="infopage-post">
-                <div class="infopage-post-cirlce color-cirlce"></div>
-                <div>
-                  <p>Proin gravida nibh vel velit auctor aliquet aenean...</p>
-                  <div>
-                    <span class="infopage-post-time"> 27 Dec 2015 </span>
-                    <a href="#" class="infopage-post-comment">
-                      <i class="fas fa-comments"></i>
-                      <span> 0 </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="infopage-post">
-                <div class="infopage-post-cirlce color-cirlce"></div>
-                <div>
-                  <p>Proin gravida nibh vel velit auctor aliquet aenean...</p>
-                  <div>
-                    <span class="infopage-post-time"> 27 Dec 2015 </span>
-                    <a href="#" class="infopage-post-comment">
-                      <i class="fas fa-comments"></i>
-                      <span> 14 </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="infopage-post">
-                <div class="infopage-post-cirlce color-cirlce"></div>
-                <div>
-                  <p>Proin gravida nibh vel velit auctor aliquet aenean...</p>
-                  <div>
-                    <span class="infopage-post-time"> 27 Dec 2015 </span>
-                    <a href="#" class="infopage-post-comment">
-                      <i class="fas fa-comments"></i>
-                      <span> 0 </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="infopage-item">
-              <h3 class="infopage-tit">USEFUL LINK</h3>
-              <ul class="infopage-linklist">
-                <li>
-                  <a href="#" class="list-item">
-                    General Information For Users
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="list-item"> Interactive Fairy Tales </a>
-                </li>
-                <li>
-                  <a href="#" class="list-item">
-                    Official Storybook Maker Website
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="list-item">
-                    Everyday Mathematics Links
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="list-item">
-                    Basic Knowledge and Experience
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="infopage-col">
-          <div class="infopage-colflex">
-            <div class="infopage-item">
-              <h3 class="infopage-tit">EMAIL US</h3>
-              <div class="infopage-input">
-                <input type="text" placeholder="Your name" id="user" />
-                <label for="user">
-                  <i class="fas fa-user"></i>
-                </label>
-              </div>
-              <div class="infopage-input">
-                <input type="text" id="email" />
-                <label for="email">
-                  <i class="fas fa-envelope"></i>
-                </label>
-              </div>
-              <div class="infopage-feedback infopage-input">
-                <input type="text" placeholder="Your massage" />
-              </div>
-              <button class="infopage-btn">SEND MASSAGE</button>
-            </div>
-            <div class="infopage-item">
-              <h3 class="infopage-tit">PROJECT / CLIENTS ?</h3>
-              <div class="container-flex flex-gap">
-                <div class="color-square color-1"></div>
-                <div class="color-square color-2"></div>
-                <div class="color-square color-3"></div>
-                <div class="color-square color-2"></div>
-                <div class="color-square color-3"></div>
-                <div class="color-square color-1"></div>
-                <div class="btn-dot infopage-dot">
-                  <input type="radio" name="dot" id="dot1" />
-                  <label for="dot1" class="infopage-dot-active"></label>
-                  <input type="radio" name="dot" id="dot2" />
-                  <label for="dot2"></label>
-                  <input type="radio" name="dot" id="dot3" />
-                  <label for="dot3"></label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="infopage-col">
-          <div class="infopage-colflex">
-            <div class="infopage-item">
-              <h3 class="infopage-tit">FLICKR FEED</h3>
-              <div class="container-flex flex-gap">
-                <div class="color-square color-4"></div>
-                <div class="color-square color-1"></div>
-                <div class="color-square color-5"></div>
-                <div class="color-square color-1"></div>
-                <div class="color-square color-6"></div>
-                <div class="color-square color-4"></div>
-                <div class="color-square color-7"></div>
-                <div class="color-square color-5"></div>
-                <div class="color-square color-1"></div>
-              </div>
-            </div>
-
-            <div class="infopage-item">
-              <h3 class="infopage-tit">NEWLETTERS</h3>
-              <p class="infopage-subscribe">
-                Subscribe to our MailChimp newsletter and stay up to date with
-                all events coming straight in your mailbox:
+                <span class="infopage-contact"> Fax: +1 916-875-2235 </span>
               </p>
-              <div class="infopage-input">
-                <input type="text" placeholder="Your email address" id="user" />
-                <label for="user">
-                  <i class="fas fa-chevron-right infopage-nextemail"></i>
-                </label>
-              </div>
-              <p class="infopage-note">
-                <span>*</span>
-                Personal information will been crypted
+              <p>
+                <i class="far fa-envelope"></i>
+                <span class="infopage-contact">
+                  Email:
+                  <a href="#">info@domain.ltd</a>
+                </span>
+              </p>
+              <p>
+                <i class="fas fa-globe"></i>
+                <span class="infopage-contact">
+                  Website:
+                  <a href="#"> www.codex-themes.com </a>
+                </span>
               </p>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="infopage-col">
+        <div class="infopage-colflex">
+          <div class="infopage-item">
+            <h3 class="infopage-tit">RECENT POST</h3>
+            <div class="infopage-post">
+              <div class="infopage-post-cirlce color-cirlce"></div>
+              <div>
+                <p>Proin gravida nibh vel velit auctor aliquet aenean...</p>
+                <div>
+                  <span class="infopage-post-time"> 27 Dec 2015 </span>
+                  <a href="#" class="infopage-post-comment">
+                    <i class="fas fa-comments"></i>
+                    <span> 0 </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="infopage-post">
+              <div class="infopage-post-cirlce color-cirlce"></div>
+              <div>
+                <p>Proin gravida nibh vel velit auctor aliquet aenean...</p>
+                <div>
+                  <span class="infopage-post-time"> 27 Dec 2015 </span>
+                  <a href="#" class="infopage-post-comment">
+                    <i class="fas fa-comments"></i>
+                    <span> 14 </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="infopage-post">
+              <div class="infopage-post-cirlce color-cirlce"></div>
+              <div>
+                <p>Proin gravida nibh vel velit auctor aliquet aenean...</p>
+                <div>
+                  <span class="infopage-post-time"> 27 Dec 2015 </span>
+                  <a href="#" class="infopage-post-comment">
+                    <i class="fas fa-comments"></i>
+                    <span> 0 </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="infopage-item">
+            <h3 class="infopage-tit">USEFUL LINK</h3>
+            <ul class="infopage-linklist">
+              <li>
+                <a href="#" class="list-item">
+                  General Information For Users
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item"> Interactive Fairy Tales </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  Official Storybook Maker Website
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  Everyday Mathematics Links
+                </a>
+              </li>
+              <li>
+                <a href="#" class="list-item">
+                  Basic Knowledge and Experience
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="infopage-col">
+        <div class="infopage-colflex">
+          <div class="infopage-item">
+            <h3 class="infopage-tit">EMAIL US</h3>
+            <div class="infopage-input">
+              <input type="text" placeholder="Your name" id="user" />
+              <label for="user">
+                <i class="fas fa-user"></i>
+              </label>
+            </div>
+            <div class="infopage-input">
+              <input type="text" id="email" />
+              <label for="email">
+                <i class="fas fa-envelope"></i>
+              </label>
+            </div>
+            <div class="infopage-feedback infopage-input">
+              <input type="text" placeholder="Your massage" />
+            </div>
+            <button class="infopage-btn">SEND MASSAGE</button>
+          </div>
+          <div class="infopage-item">
+            <h3 class="infopage-tit">PROJECT / CLIENTS ?</h3>
+            <div class="infopage-slides">
+              <div class="color-square infopage-slides-item color-1"></div>
+              <div class="color-square infopage-slides-item color-2"></div>
+              <div class="color-square infopage-slides-item color-3"></div>
+              <div class="color-square infopage-slides-item color-2"></div>
+              <div class="color-square infopage-slides-item color-3"></div>
+              <div class="color-square infopage-slides-item color-1"></div>
+            </div>
+            <div class="infopage-slides">
+              <div class="color-square infopage-slides-item color-3"></div>
+              <div class="color-square infopage-slides-item color-2"></div>
+              <div class="color-square infopage-slides-item color-3"></div>
+              <div class="color-square infopage-slides-item color-2"></div>
+              <div class="color-square infopage-slides-item color-2"></div>
+              <div class="color-square infopage-slides-item color-1"></div>
+            </div>
+            <div class="infopage-slides">
+              <div class="color-square infopage-slides-item color-1"></div>
+              <div class="color-square infopage-slides-item color-2"></div>
+              <div class="color-square infopage-slides-item color-3"></div>
+              <div class="color-square infopage-slides-item color-2"></div>
+              <div class="color-square infopage-slides-item color-7"></div>
+              <div class="color-square infopage-slides-item color-1"></div>
+            </div>
+            <div class="btn-dot infopage-dots">
+              <input type="radio" id="dot1" />
+              <label for="dot1" class="infopage-dot" onclick="currentSlide_infopage(1)"></label>
+              <input type="radio" id="dot2" />
+              <label for="dot2" class="infopage-dot" onclick="currentSlide_infopage(2)"></label>
+              <input type="radio" id="dot3" />
+              <label for="dot3" class="infopage-dot" onclick="currentSlide_infopage(3)"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="infopage-col">
+        <div class="infopage-colflex">
+          <div class="infopage-item">
+            <h3 class="infopage-tit">FLICKR FEED</h3>
+            <div class="container-flex flex-gap">
+              <div class="color-square color-4"></div>
+              <div class="color-square color-1"></div>
+              <div class="color-square color-5"></div>
+              <div class="color-square color-1"></div>
+              <div class="color-square color-6"></div>
+              <div class="color-square color-4"></div>
+              <div class="color-square color-7"></div>
+              <div class="color-square color-5"></div>
+              <div class="color-square color-1"></div>
+            </div>
+          </div>
+
+          <div class="infopage-item">
+            <h3 class="infopage-tit">NEWLETTERS</h3>
+            <p class="infopage-subscribe">
+              Subscribe to our MailChimp newsletter and stay up to date with
+              all events coming straight in your mailbox:
+            </p>
+            <div class="infopage-input">
+              <input type="text" placeholder="Your email address" id="email1" />
+              <label for="email1">
+                <i class="fas fa-chevron-right infopage-nextemail"></i>
+              </label>
+            </div>
+            <p class="infopage-note">
+              <span>*</span>
+              Personal information will been crypted
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer class="footer">
@@ -547,6 +613,7 @@
       </nav>
     </div>
   </footer>
+  <script language="javascript" src="./action.js"></script>
 </body>
 
 </html>

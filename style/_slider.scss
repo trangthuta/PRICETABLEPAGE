@@ -68,7 +68,7 @@
     }
     .active {
       &::after {
-        background-color: $blue-color;
+        background-color: $blue-color !important;
       }
     }
   }
@@ -119,5 +119,8 @@
         }
       }
     }
+  }
+  .mySlides {
+    display: none;
   }
 }
