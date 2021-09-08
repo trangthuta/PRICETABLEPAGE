@@ -217,15 +217,25 @@
   .color-7 {
     background-color: #dfe5e8;
   }
-  ///slide-show
+  &-slideshow {
+    overflow: hidden;
+    position: relative;
+    height: 180px;
+    z-index: 1;
+  }
   &-slides {
+    width: 100%;
+    display: inline-block;
+    z-index: -1;
+    position: absolute;
+    left: 100%;
     display: none;
     &-item {
-      display: inline-block;
-      margin-bottom: 2px;
-      &:nth-child(5) {
-        margin: 0 7.3px;
-      }
-    }
+          display: inline-block;
+          margin-bottom: 2px;
+          &:nth-child(5) {
+            margin: 3px 7.3px;
+          }
   }
+}
 }

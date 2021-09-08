@@ -57,13 +57,13 @@
   </header>
   <section class="slider text-center">
     <span class="slider-arrowslide arrleft">
-      <i class="fas fa-arrow-left slider-arrow " onclick="plusSlide(-1)"></i>
+      <i class="fas fa-arrow-left slider-arrow " onclick="plusSlides(-1)"></i>
     </span>
     <span class="slider-arrowslide arright">
-      <i class="fas fa-arrow-right slider-arrow" onclick="plusSlide(1)"></i>
+      <i class="fas fa-arrow-right slider-arrow" onclick="plusSlides(1)"></i>
     </span>
-    <div class=" container">
-      <div class="mySlides">
+    <div class=" container slideshow">
+      <div id="slide-first" class="slideshow-slide slideIn slide1" >
         <a href="#">
           <i class="fas fa-bars slider-iconbar"></i>
         </a>
@@ -86,14 +86,13 @@
           </button>
         </div>
       </div>
-
-      <div class="mySlides">
+      <div class="slideshow-slide">
         <a href="#">
           <i class="fas fa-bars slider-iconbar"></i>
         </a>
         <h1 class="slider-title subtitle-big">
           PRICING
-          <strong> TABLES 2 </strong>
+          <strong> TABLES 2</strong>
         </h1>
         <p class="slider-content subtitle-small">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -102,22 +101,21 @@
           aliquip ex ea
         </p>
         <div class="slider-button">
-          <button class=" button-properties btnleft" style="color:#00bcd4;border-color:#00bcd4">
+          <button class=" button-properties btnleft">
             PURCHASE NOW
           </button>
-          <button class=" button-properties btnright" style="color:white;border-color:white">
+          <button class=" button-properties btnright">
             MORE DETAILS
           </button>
         </div>
       </div>
-
-      <div class="mySlides">
+      <div class="slideshow-slide">
         <a href="#">
           <i class="fas fa-bars slider-iconbar"></i>
         </a>
         <h1 class="slider-title subtitle-big">
           PRICING
-          <strong> TABLES 3 </strong>
+          <strong> TABLES 3</strong>
         </h1>
         <p class="slider-content subtitle-small">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -126,10 +124,10 @@
           aliquip ex ea
         </p>
         <div class="slider-button">
-          <button class=" button-properties btnleft" style="color:#00bcd4;border-color:#00bcd4">
+          <button class=" button-properties btnleft">
             PURCHASE NOW
           </button>
-          <button class=" button-properties btnright" style="color:#00bcd4;border-color:#00bcd4">
+          <button class=" button-properties btnright">
             MORE DETAILS
           </button>
         </div>
@@ -137,11 +135,11 @@
     </div>
     <div class="btn-dot slider-dot">
       <input type="radio" name="rdo-btn" id="rdo-btn1" />
-      <label for="rdo-btn1" class="dot" onclick="currentSlide(1)"></label>
-      <input type="radio" name="rdo-btn" id="rdo-btn2" />
-      <label for="rdo-btn2" class="dot" onclick="currentSlide(2)"></label>
+      <label for="rdo-btn1" class="dot slideshow-dot" onclick="currentSlide(1)"></label>
+      <input type="radio" name="rdo-btn slideshow-dot" id="rdo-btn2" />
+      <label for="rdo-btn2" class="dot slideshow-dot" onclick="currentSlide(2)"></label>
       <input type="radio" name="rdo-btn" id="rdo-btn3" />
-      <label for="rdo-btn3" class="dot" onclick="currentSlide(3)"></label>
+      <label for="rdo-btn3" class="dot slideshow-dot" onclick="currentSlide(3)"></label>
     </div>
 
   </section>
@@ -488,29 +486,31 @@
           </div>
           <div class="infopage-item">
             <h3 class="infopage-tit">PROJECT / CLIENTS ?</h3>
-            <div class="infopage-slides">
-              <div class="color-square infopage-slides-item color-1"></div>
-              <div class="color-square infopage-slides-item color-2"></div>
-              <div class="color-square infopage-slides-item color-3"></div>
-              <div class="color-square infopage-slides-item color-2"></div>
-              <div class="color-square infopage-slides-item color-3"></div>
-              <div class="color-square infopage-slides-item color-1"></div>
-            </div>
-            <div class="infopage-slides">
-              <div class="color-square infopage-slides-item color-3"></div>
-              <div class="color-square infopage-slides-item color-2"></div>
-              <div class="color-square infopage-slides-item color-3"></div>
-              <div class="color-square infopage-slides-item color-2"></div>
-              <div class="color-square infopage-slides-item color-2"></div>
-              <div class="color-square infopage-slides-item color-1"></div>
-            </div>
-            <div class="infopage-slides">
-              <div class="color-square infopage-slides-item color-1"></div>
-              <div class="color-square infopage-slides-item color-2"></div>
-              <div class="color-square infopage-slides-item color-3"></div>
-              <div class="color-square infopage-slides-item color-2"></div>
-              <div class="color-square infopage-slides-item color-7"></div>
-              <div class="color-square infopage-slides-item color-1"></div>
+            <div class="infopage-slideshow">
+              <div class="infopage-slides slide1" id="infotable-slide-first">
+                <div class="color-square infopage-slides-item color-1"></div>
+                <div class="color-square infopage-slides-item color-2"></div>
+                <div class="color-square infopage-slides-item color-3"></div>
+                <div class="color-square infopage-slides-item color-3"></div>
+                <div class="color-square infopage-slides-item color-2"></div>
+                <div class="color-square infopage-slides-item color-1"></div>
+              </div>
+              <div class="infopage-slides">
+                <div class="color-square infopage-slides-item color-4"></div>
+                <div class="color-square infopage-slides-item color-5"></div>
+                <div class="color-square infopage-slides-item color-6"></div>
+                <div class="color-square infopage-slides-item color-1"></div>
+                <div class="color-square infopage-slides-item color-2"></div>
+                <div class="color-square infopage-slides-item color-3"></div>
+              </div>
+              <div class="infopage-slides">
+                <div class="color-square infopage-slides-item color-7"></div>
+                <div class="color-square infopage-slides-item color-6"></div>
+                <div class="color-square infopage-slides-item color-5"></div>
+                <div class="color-square infopage-slides-item color-2"></div>
+                <div class="color-square infopage-slides-item color-7"></div>
+                <div class="color-square infopage-slides-item color-1"></div>
+              </div>
             </div>
             <div class="btn-dot infopage-dots">
               <input type="radio" id="dot1" />

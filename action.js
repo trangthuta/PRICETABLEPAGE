@@ -1,45 +1,62 @@
-let slideIndex;
-showSlides_slider = () => {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (slideIndex > slides.length) slideIndex = 1;
-  if (slideIndex < 1) slideIndex = slides.length;
+let slideIndex = 1;
+showSlides = (Index) => {
+  const slides = document.getElementsByClassName("slideshow-slide");
+  const dots = document.getElementsByClassName("slideshow-dot");
+  const slide1 = document.getElementById("slide-first");
+  if (Index > slides.length) Index = 1;
+  if (Index < 1) Index = slides.length;
+  if (Index > 1) slide1.style.display = "none";
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].className = "slideshow-slide slideOut";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  slideIndex++;
-  setTimeout(showSlides_slider,1000)
+  slides[Index - 1].style.display = "inline-block";
+  slides[Index - 1].className = "slideshow-slide slideIn";
+  dots[Index - 1].className += " active";
+  slideIndex = Index;
 };
-showSlides_slider((slideIndex = 1));
+showSlides(slideIndex);
+plusSlides = (n) => {
+  showSlides(slideIndex + n);
+};
 currentSlide = (n) => {
-  showSlides_slider((slideIndex = n));
+  showSlides((slideIndex = n));
 };
-plusSlide = (n) => {
-  showSlides_slider((slideIndex += n));
-};
-showSlides_infopage = () => {
-  let i;
-  let slides = document.getElementsByClassName("infopage-slides");
-  let dots = document.getElementsByClassName("infopage-dot");
-  if (slideIndex > slides.length) slideIndex = 1;
-  if (slideIndex < 1) slideIndex = slides.length;
+//////
+showSlides_infopage = (Index) => {
+  const slides = document.getElementsByClassName("infopage-slides");
+  const dots = document.getElementsByClassName("infopage-dot");
+  const slide1 = document.getElementById("infotable-slide-first");
+  if (Index > slides.length) Index = 1;
+  if (Index < 1) Index = slides.length;
+  if (Index > 1) slide1.style.display = "none";
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].className = "infopage-slides slideOut";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" infopage-active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " infopage-active";
-  setTimeout(showSlides_infopage,1000);
+  slides[Index - 1].style.display = "inline-block";
+  slides[Index - 1].className = "infopage-slides slideIn";
+  dots[Index - 1].className += " infopage-active";
+  slideIndex = Index;
 };
-showSlides_infopage((slideIndex = 1));
+showSlides_infopage(slideIndex);
 currentSlide_infopage = (n) => {
   showSlides_infopage((slideIndex = n));
 };
+///autoplay
+let Index = 1;
+let Index1 = 1;
+setInterval(() => {
+  showSlides(Index1);
+  let slides = document.getElementsByClassName("slideshow-slide");
+  Index1 = Index1 + 1 <= slides.length ? Index1 + 1 : 1;
+}, 2000);
+setInterval(() => {
+  showSlides_infopage(Index);
+  let slides = document.getElementsByClassName("infopage-slides");
+  Index = Index + 1 <= slides.length ? Index + 1 : 1;
+}, 2000);
