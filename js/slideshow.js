@@ -12,7 +12,7 @@ let infoPage_dots = document.querySelectorAll(".infopage-dot")
 let infoPage_dotsLength = infoPage_dots.length
 let infoPage_activeDot = ` infopage-active`
 showSlides = (
-  Index,
+  index,
   slides,
   dots,
   activeDot,
@@ -20,18 +20,18 @@ showSlides = (
   lengthSlides,
   lengthDots
 ) => {
-  if (Index > lengthSlides) Index = 1
-  if (Index < 1) Index = lengthSlides
+  if (index > lengthSlides) index = 1
+  if (index < 1) index = lengthSlides
   for (i = 0; i < lengthSlides; i++) {
     slides[i].className = `${classNameSlide} slideOut`
   }
   for (i = 0; i < lengthDots; i++) {
     dots[i].className = dots[i].className.replace(`${activeDot}`, "")
   }
-  slides[Index - 1].style.display = "inline-block"
-  slides[Index - 1].className = `${classNameSlide} slideIn`
-  dots[Index - 1].className += `${activeDot}`
-  slideIndex = Index
+  slides[index - 1].style.display = "inline-block"
+  slides[index - 1].className = `${classNameSlide} slideIn`
+  dots[index - 1].className += `${activeDot}`
+  slideIndex = index
 }
 showSlides(
   slideIndex,
