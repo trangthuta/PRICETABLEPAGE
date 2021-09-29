@@ -696,7 +696,7 @@ body {
   }
 }
 
-.infopage {
+.infoPage {
   background-color: #212331;
   color: #99a9b5;
   padding: 115px 0 90px 0;
@@ -704,12 +704,12 @@ body {
   line-height: 25px;
 }
 
-.infopage a {
+.infoPage a {
   text-decoration: none;
   color: #00bcd4;
 }
 
-.infopage-tit {
+.infoPage-tit {
   color: white;
   font-size: 19px;
   font-family: "Montserrat", sans-serif;
@@ -718,7 +718,7 @@ body {
   position: relative;
 }
 
-.infopage-tit:after {
+.infoPage-tit:after {
   position: absolute;
   content: "";
   width: 0;
@@ -729,12 +729,12 @@ body {
           transform: translate(200%, 100%);
 }
 
-.infopage-col {
+.infoPage-col {
   max-width: 261px;
   height: 705px;
 }
 
-.infopage-colflex {
+.infoPage-colflex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -745,89 +745,89 @@ body {
   gap: 50px 0;
 }
 
-.infopage-item {
+.infoPage-item {
   width: 100%;
 }
 
-.infopage-address {
+.infoPage-address {
   padding-bottom: 30px;
   border-bottom: 1px dashed #99a9b5;
 }
 
-.infopage-PM {
+.infoPage-PM {
   margin-top: 30px;
 }
 
-.infopage-contact {
+.infoPage-contact {
   margin-left: 10px;
   line-height: 35px;
 }
 
-.infopage-post {
+.infoPage-post {
   border-bottom: 1px dashed #99a9b5;
   padding-bottom: 15px;
 }
 
-.infopage-post-cirlce {
+.infoPage-post-cirlce {
   background-color: #99a9b5;
   margin-right: 10px;
 }
 
-.infopage-post-time {
+.infoPage-post-time {
   color: #00bcd4;
 }
 
-.infopage-post-comment {
+.infoPage-post-comment {
   float: right;
   color: #99a9b5 !important;
 }
 
-.infopage-post-comment:hover {
+.infoPage-post-comment:hover {
   color: #00bcd4 !important;
 }
 
-.infopage-post:last-child {
+.infoPage-post:last-child {
   border-bottom: none;
   padding-bottom: 0px;
 }
 
-.infopage-post:nth-child(3), .infopage-post:nth-child(4) {
+.infoPage-post:nth-child(3), .infoPage-post:nth-child(4) {
   padding-top: 15px;
 }
 
-.infopage-linklist {
+.infoPage-linklist {
   margin-left: 18px;
 }
 
-.infopage-linklist li {
+.infoPage-linklist li {
   border-bottom: 1px dashed #99a9b5;
   line-height: 40px;
   color: aqua;
 }
 
-.infopage-linklist li:last-child {
+.infoPage-linklist li:last-child {
   border-bottom: none;
 }
 
-.infopage-linklist li:hover {
+.infoPage-linklist li:hover {
   color: white;
 }
 
-.infopage-linklist .list-item {
+.infoPage-linklist .list-item {
   color: #99a9b5 !important;
 }
 
-.infopage-linklist .list-item:hover {
+.infoPage-linklist .list-item:hover {
   color: #00bcd4 !important;
 }
 
-.infopage-input {
+.infoPage-input {
   width: 100%;
   position: relative;
   display: block;
 }
 
-.infopage-input input {
+.infoPage-input input {
   width: 239px;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -840,28 +840,28 @@ body {
   border: 1px solid #394050;
 }
 
-.infopage-input input::-webkit-input-placeholder {
+.infoPage-input input::-webkit-input-placeholder {
   color: #494a59;
 }
 
-.infopage-input input:-ms-input-placeholder {
+.infoPage-input input:-ms-input-placeholder {
   color: #494a59;
 }
 
-.infopage-input input::-ms-input-placeholder {
+.infoPage-input input::-ms-input-placeholder {
   color: #494a59;
 }
 
-.infopage-input input::placeholder {
+.infoPage-input input::placeholder {
   color: #494a59;
 }
 
-.infopage-input input:focus {
+.infoPage-input input:focus {
   outline: none;
   border: 1px solid #00bcd4 !important;
 }
 
-.infopage-input i {
+.infoPage-input i {
   position: absolute;
   z-index: 1;
   right: 0;
@@ -870,12 +870,12 @@ body {
           transform: translate(-12px, 12px);
 }
 
-.infopage-feedback input {
+.infoPage-feedback input {
   padding: 11.5px;
   padding-bottom: 69.5px;
 }
 
-.infopage-btn {
+.infoPage-btn {
   width: 100%;
   height: 40px;
   background-color: #393d50;
@@ -885,35 +885,35 @@ body {
   font-weight: 700;
 }
 
-.infopage-dots {
+.infoPage-dots {
   width: 100%;
   text-align: center;
 }
 
-.infopage-dots label {
+.infoPage-dots label {
   font-weight: bold;
   padding-right: 15px;
 }
 
-.infopage-dots label:nth-last-child(1) {
+.infoPage-dots label:nth-last-child(1) {
   padding-right: 0;
 }
 
-.infopage-dots label::before {
+.infoPage-dots label::before {
   margin: 0 10px;
 }
 
-.infopage-dots label::after {
+.infoPage-dots label::after {
   width: 15px;
   height: 15px;
   background-color: #394050;
 }
 
-.infopage-active::after {
+.infoPage-active::after {
   background-color: #99a9b5 !important;
 }
 
-.infopage-nextemail {
+.infoPage-nextemail {
   width: 40px;
   height: 38px;
   background-color: #394050;
@@ -930,71 +930,71 @@ body {
           align-items: center;
 }
 
-.infopage-subscribe {
+.infoPage-subscribe {
   margin-bottom: 30px;
 }
 
-.infopage-note {
+.infoPage-note {
   font-size: 14px;
   color: #4a4b5b;
 }
 
-.infopage-note span {
+.infoPage-note span {
   color: #00bcd4;
 }
 
-.infopage .flex-gap {
+.infoPage .flex-gap {
   gap: 10px 10px;
 }
 
-.infopage .color-cirlce {
+.infoPage .color-cirlce {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   float: left;
 }
 
-.infopage .color-square {
+.infoPage .color-square {
   width: 80px;
   height: 80px;
 }
 
-.infopage .color-1 {
+.infoPage .color-1 {
   background-color: #828e97;
 }
 
-.infopage .color-2 {
+.infoPage .color-2 {
   background-color: #5c6973;
 }
 
-.infopage .color-3 {
+.infoPage .color-3 {
   background-color: #4b565d;
 }
 
-.infopage .color-4 {
+.infoPage .color-4 {
   background-color: #b6c6c9;
 }
 
-.infopage .color-5 {
+.infoPage .color-5 {
   background-color: #bcbcbc;
 }
 
-.infopage .color-6 {
+.infoPage .color-6 {
   background-color: #5f727f;
 }
 
-.infopage .color-7 {
+.infoPage .color-7 {
   background-color: #dfe5e8;
 }
 
-.infopage-slideshow {
+.infoPage-slideshow {
   overflow: hidden;
   position: relative;
   height: 180px;
   z-index: 1;
 }
 
-.infopage-slides {
+.infoPage-slides {
   width: 100%;
   display: inline-block;
   z-index: -1;
@@ -1003,12 +1003,12 @@ body {
   display: none;
 }
 
-.infopage-slides-item {
+.infoPage-slides-item {
   display: inline-block;
   margin-bottom: 2px;
 }
 
-.infopage-slides-item:nth-child(5) {
+.infoPage-slides-item:nth-child(5) {
   margin: 3px 7.3px;
 }
 

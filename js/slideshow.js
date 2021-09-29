@@ -1,19 +1,21 @@
 let slideIndex = 1
-let slider_slides = document.querySelectorAll(".slideshow-slide")
-let slider_sliderLength = slider_slides.length
-let slider_classNameSlide = "slideshow-slide"
-let slider_dots = document.querySelectorAll(".slideshow-dot")
-let slider_dotsLength = slider_dots.length
-let slider_activeDot = " active"
-let infoPage_slides = document.querySelectorAll(".infopage-slides")
-let infoPage_sliderLength = infoPage_slides.length
-let infoPage_classNameSlide = "infopage-slides"
-let infoPage_dots = document.querySelectorAll(".infopage-dot")
-let infoPage_dotsLength = infoPage_dots.length
-let infoPage_activeDot = " infopage-active"
+const sliderSlides = document.querySelectorAll(".slideshow-slide")
+const sliderSliderLength = sliderSlides.length
+const sliderClassNameSlide = "slideshow-slide"
+const sliderDots = document.querySelectorAll(".slideshow-dot")
+const sliderDotsLength = sliderDots.length
+const sliderActiveDot = " active"
+const infoPageSlides = document.querySelectorAll(".infoPage-slides")
+const infoPageSliderLength = infoPageSlides.length
+const infoPageClassNameSlide = "infoPage-slides"
+const infoPageDots = document.querySelectorAll(".infoPage-dot")
+const infoPageDotsLength = infoPageDots.length
+const infoPageActiveDot = " infoPage-active"
+const arrowLeft = document.querySelector(".arrow-left")
+const arrowRight = document.querySelector(".arrow-right")
 
-//callback function 
-showSlides = (
+//callback function
+const showSlides = (
   index,
   slides,
   dots,
@@ -24,120 +26,125 @@ showSlides = (
 ) => {
   if (index > lengthSlides) index = 1
   if (index < 1) index = lengthSlides
-  for (i = 0; i < lengthSlides; i++) {
+  for ( var i = 0; i < lengthSlides; i++) {
     slides[i].className = `${classNameSlide} slideOut`
   }
-  for (i = 0; i < lengthDots; i++) {
+  for ( var i = 0; i < lengthDots; i++) {
     dots[i].className = dots[i].className.replace(`${activeDot}`, "")
   }
-  slides[index - 1].style.display = "inline-block"
-  slides[index - 1].className = `${classNameSlide} slideIn`
-  dots[index - 1].className += `${activeDot}`
+  slides[index-1].style.display = "inline-block"
+  slides[index-1].className = `${classNameSlide} slideIn`
+  dots[index-1].className += `${activeDot}`
   slideIndex = index
-}
+ }
 
 //show first slide in 'slider' block
-showSlides(
-  slideIndex,
-  slider_slides,
-  slider_dots,
-  slider_activeDot,
-  slider_classNameSlide,
-  slider_sliderLength,
-  slider_dotsLength
-)
-
-// Next/previous button controls in 'slider' block
-plusSlides = (index) => {
   showSlides(
-    slideIndex + index,
-    slider_slides,
-    slider_dots,
-    slider_activeDot,
-    slider_classNameSlide,
-    slider_sliderLength,
-    slider_dotsLength
+    slideIndex,
+    sliderSlides,
+    sliderDots,
+    sliderActiveDot,
+    sliderClassNameSlide,
+    sliderSliderLength,
+    sliderDotsLength
   )
+  //show first slide  in "infoPage" block
+  showSlides(
+  slideIndex,
+  infoPageSlides,
+  infoPageDots,
+  infoPageActiveDot,
+  infoPageClassNameSlide,
+  infoPageSliderLength,
+  infoPageDotsLength
+)
+  //Next  button slide
 
-  // Stop autoplay after clicking on Next/previous button  in 'slider' block
-  clearInterval(autoplay_slider)
 
-}
-
+arrowLeft.addEventListener("click", () =>{
+  clearInterval(autoplay)
+  showSlides(
+    slideIndex - 1,
+    sliderSlides,
+    sliderDots,
+    sliderActiveDot,
+    sliderClassNameSlide,
+    sliderSliderLength,
+    sliderDotsLength
+  )
+})  
+arrowRight.addEventListener("click", () =>{
+  clearInterval(autoplay)
+  showSlides(
+    slideIndex +1,
+    sliderSlides,
+    sliderDots,
+    sliderActiveDot,
+    sliderClassNameSlide,
+    sliderSliderLength,
+    sliderDotsLength
+  )
+})
 // dots button  in 'slider' block
-currentSlide = (index) => {
+const currentSlide = (index) => {
   showSlides(
     (slideIndex = index),
-    slider_slides,
-    slider_dots,
-    slider_activeDot,
-    slider_classNameSlide,
-    slider_sliderLength,
-    slider_dotsLength
+    sliderSlides,
+    sliderDots,
+    sliderActiveDot,
+    sliderClassNameSlide,
+    sliderSliderLength,
+    sliderDotsLength
   )
-
-  //Stop autoplay after clicking on dots  in 'slider' block
-  clearInterval(autoplay_slider)
-
 }
 
-//show first slide  in 'slider' block
-showSlides(
-  slideIndex,
-  infoPage_slides,
-  infoPage_dots,
-  infoPage_activeDot,
-  infoPage_classNameSlide,
-  infoPage_sliderLength,
-  infoPage_dotsLength
-)
+//assign event to dot button in 'slider' block
+sliderDots.forEach((dot, index) => {
+  index = slideIndex++
+  dot.addEventListener('click', () => {
+    currentSlide(index)
+  })
+})
 
-//dots button in "infopage" block
-currentSlide_infopage = (index) => {
+
+//dots button in "infoPage" block
+const currentSlideInfoPage = (index) => {
   showSlides(
     (slideIndex = index),
-    infoPage_slides,
-    infoPage_dots,
-    infoPage_activeDot,
-    infoPage_classNameSlide,
-    infoPage_sliderLength,
-    infoPage_dotsLength
+    infoPageSlides,
+    infoPageDots,
+    infoPageActiveDot,
+    infoPageClassNameSlide,
+    infoPageSliderLength,
+    infoPageDotsLength
   )
-
-  //Stop autoplay after clicking in "infopage" block 
-  clearInterval(autoplay_infopage)
 }
 
-//set auto play slideshow in  in 'slider' block
-let indexAuto = 1
-let autoplay_slider = setInterval(() => {
-  showSlides(
-    indexAuto,
-    slider_slides,
-    slider_dots,
-    slider_activeDot,
-    slider_classNameSlide,
-    slider_sliderLength,
-    slider_dotsLength
-  )
-  indexAuto = indexAuto + 1 > slider_sliderLength ? 1 : indexAuto + 1
-}, 1000)
+//assign event to dot button in 'infoPage' block
+infoPageDots.forEach((dot, index) => {
+  index = slideIndex++
+  dot.addEventListener('click', () => {
+    currentSlide(index)
+  })
+})
+
+// autoRun
+  let autoplay=setInterval(()=>{
+    showSlides(
+      slideIndex,
+      sliderSlides,
+      sliderDots,
+      sliderActiveDot,
+      sliderClassNameSlide,
+      sliderSliderLength,
+      sliderDotsLength
+    )
+    slideIndex++
+  },2000)
 
 
-//set auto play slideshow in  in 'infopage' block
-// let indexAuto_infopage = 1
-// let autoplay_infopage = setInterval(() => {
-//   showSlides(
-//     indexAuto_infopage,
-//     infoPage_slides,
-//     infoPage_dots,
-//     infoPage_activeDot,
-//     infoPage_classNameSlide,
-//     infoPage_sliderLength,
-//     infoPage_dotsLength
-//   );
-//   indexAuto_infopage = indexAuto_infopage + 1 > infoPage_sliderLength ? 1 : indexAuto_infopage + 1
-// }, 1000);
+
+
 
 
 
