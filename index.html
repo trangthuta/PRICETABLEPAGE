@@ -63,7 +63,7 @@
       <i class="fas fa-arrow-right slider-arrow  arrow-right"></i>
     </span>
     <div class=" container slideshow">
-      <div class="slideshow-slide slideIn">
+      <div class="slideshow-slide">
         <a href="#">
           <i class="fas fa-bars slider-iconbar"></i>
         </a>
@@ -133,14 +133,12 @@
         </div>
       </div>
     </div>
-    <div class="btn-dot slider-dot">
-      <input type="radio" name="rdo-btn" id="rdo-btn1" />
-      <label for="rdo-btn1" class="dot slideshow-dot"></label>
-      <input type="radio" name="rdo-btn slideshow-dot" id="rdo-btn2" />
-      <label for="rdo-btn2" class="dot slideshow-dot"></label>
-      <input type="radio" name="rdo-btn" id="rdo-btn3" />
-      <label for="rdo-btn3" class="dot slideshow-dot"></label>
-    </div>
+    <!-- Su dung cach nay de lamf code gon hon va co the xu ly click dots 1 cach don gian -->
+    <div class="currentSlide">
+      <span class="dot" name="0"></span>
+      <span class="dot" name="1"></span>
+      <span class="dot" name="2"></span>
+  </div>
 
   </section>
   <section class="content text-center">
@@ -512,14 +510,12 @@
                 <div class="color-square infoPage-slides-item color-1"></div>
               </div>
             </div>
-            <div class="btn-dot infoPage-dots">
-              <input type="radio" id="dot1" />
-              <label for="dot1" class="infoPage-dot"></label>
-              <input type="radio" id="dot2" />
-              <label for="dot2" class="infoPage-dot"></label>
-              <input type="radio" id="dot3" />
-              <label for="dot3" class="infoPage-dot"></label>
-            </div>
+            <!-- Su dung cach nay de lamf code gon hon va co the xu ly click dots 1 cach don gian -->
+            <div class="round-footer">
+              <i class="fa fa-circle dot-footer" name="0" aria-hidden="true"></i>
+              <i class="fa fa-circle dot-footer" name="1" aria-hidden="true"></i>
+              <i class="fa fa-circle dot-footer" name="2" aria-hidden="true"></i>
+          </div>
           </div>
         </div>
       </div>

@@ -1,151 +1,184 @@
-let slideIndex = 1
-const sliderSlides = document.querySelectorAll(".slideshow-slide")
-const sliderSliderLength = sliderSlides.length
-const sliderClassNameSlide = "slideshow-slide"
-const sliderDots = document.querySelectorAll(".slideshow-dot")
-const sliderDotsLength = sliderDots.length
-const sliderActiveDot = " active"
-const infoPageSlides = document.querySelectorAll(".infoPage-slides")
-const infoPageSliderLength = infoPageSlides.length
-const infoPageClassNameSlide = "infoPage-slides"
-const infoPageDots = document.querySelectorAll(".infoPage-dot")
-const infoPageDotsLength = infoPageDots.length
-const infoPageActiveDot = " infoPage-active"
-const arrowLeft = document.querySelector(".arrow-left")
-const arrowRight = document.querySelector(".arrow-right")
+// Bien dieu khien khi chon arrow
+const NAV_ARROW = {
+	LEFT: "left",
+	RIGHT: "right",
+}
 
-//callback function
-const showSlides = (
-  index,
-  slides,
-  dots,
-  activeDot,
-  classNameSlide,
-  lengthSlides,
-  lengthDots
-) => {
-  if (index > lengthSlides) index = 1
-  if (index < 1) index = lengthSlides
-  for ( var i = 0; i < lengthSlides; i++) {
-    slides[i].className = `${classNameSlide} slideOut`
-  }
-  for ( var i = 0; i < lengthDots; i++) {
-    dots[i].className = dots[i].className.replace(`${activeDot}`, "")
-  }
-  slides[index-1].style.display = "inline-block"
-  slides[index-1].className = `${classNameSlide} slideIn`
-  dots[index-1].className += `${activeDot}`
-  slideIndex = index
- }
+// Bien khai bao 2 arrow
+const prevSlide = document.querySelector(".arrow-left")
+const nextSlide = document.querySelector(".arrow-right")
 
-//show first slide in 'slider' block
-  showSlides(
-    slideIndex,
-    sliderSlides,
-    sliderDots,
-    sliderActiveDot,
-    sliderClassNameSlide,
-    sliderSliderLength,
-    sliderDotsLength
-  )
-  //show first slide  in "infoPage" block
-  showSlides(
-  slideIndex,
-  infoPageSlides,
-  infoPageDots,
-  infoPageActiveDot,
-  infoPageClassNameSlide,
-  infoPageSliderLength,
-  infoPageDotsLength
+// Slideshow header
+const slidersHeader = document.querySelectorAll(".slideshow-slide")
+const sliderHeaderClass = slidersHeader[0].className
+const dotsHeader = document.querySelectorAll(".dot")
+
+runSlideShow(
+	slidersHeader,
+	sliderHeaderClass,
+	dotsHeader,
+	prevSlide,
+	nextSlide
 )
-  //Next  button slide
 
+// Slideshow footer
+const slidersFooter = document.querySelectorAll(".infoPage-slides")
+const sliderFooterClass = slidersHeader[0].className
+const dotsFooter = document.querySelectorAll(".dot-footer")
 
-arrowLeft.addEventListener("click", () =>{
-  clearInterval(autoplay)
-  showSlides(
-    slideIndex - 1,
-    sliderSlides,
-    sliderDots,
-    sliderActiveDot,
-    sliderClassNameSlide,
-    sliderSliderLength,
-    sliderDotsLength
-  )
-})  
-arrowRight.addEventListener("click", () =>{
-  clearInterval(autoplay)
-  showSlides(
-    slideIndex +1,
-    sliderSlides,
-    sliderDots,
-    sliderActiveDot,
-    sliderClassNameSlide,
-    sliderSliderLength,
-    sliderDotsLength
-  )
-})
-// dots button  in 'slider' block
-const currentSlide = (index) => {
-  showSlides(
-    (slideIndex = index),
-    sliderSlides,
-    sliderDots,
-    sliderActiveDot,
-    sliderClassNameSlide,
-    sliderSliderLength,
-    sliderDotsLength
-  )
-}
+runSlideShow(slidersFooter, sliderFooterClass, dotsFooter)
 
-//assign event to dot button in 'slider' block
-sliderDots.forEach((dot, index) => {
-  index = slideIndex++
-  dot.addEventListener('click', () => {
-    currentSlide(index)
-  })
-})
-
-
-//dots button in "infoPage" block
-const currentSlideInfoPage = (index) => {
-  showSlides(
-    (slideIndex = index),
-    infoPageSlides,
-    infoPageDots,
-    infoPageActiveDot,
-    infoPageClassNameSlide,
-    infoPageSliderLength,
-    infoPageDotsLength
-  )
-}
-
-//assign event to dot button in 'infoPage' block
-infoPageDots.forEach((dot, index) => {
-  index = slideIndex++
-  dot.addEventListener('click', () => {
-    currentSlide(index)
-  })
-})
-
-// autoRun
-  let autoplay=setInterval(()=>{
-    showSlides(
-      slideIndex,
-      sliderSlides,
-      sliderDots,
-      sliderActiveDot,
-      sliderClassNameSlide,
-      sliderSliderLength,
-      sliderDotsLength
+// function xu ly hien thi slide
+function showSlides(
+  navArrow,
+  sliders,
+  sliderClass,
+  dots,
+  currentSlideIndex,
+  nextSlideIndex
+ ) {
+  if (navArrow === NAV_ARROW.LEFT) {
+    // An slide hien tai, show slide "currentSlideIndex"
+    sliders[nextSlideIndex].style.left = "-100%"
+    sliders[currentSlideIndex].style.left = 0
+    // Them class vao slide
+    sliders[nextSlideIndex].setAttribute("class", `${sliderClass} slideInLeft`)
+    sliders[currentSlideIndex].setAttribute(
+      "class",
+      `${sliderClass} slideOutRight`
     )
-    slideIndex++
-  },2000)
+  } else if (navArrow === NAV_ARROW.RIGHT) {
+    sliders[nextSlideIndex].style.left = "100%"
+    sliders[currentSlideIndex].style.left = 0
+    sliders[nextSlideIndex].setAttribute(
+      "class",
+      `${sliderClass} slideInRight`
+    )
+    sliders[currentSlideIndex].setAttribute(
+      "class",
+      `${sliderClass} slideOutLeft`
+    )
+  }
 
+	for (let i = 0 ; i < dots.length ; i++) {
+		dots[i].classList.remove("active") // Xoa phan hien thi dot
+	}
+	dots[nextSlideIndex].classList.add("active") // Hien thi dot hien tai
+}
 
+// run slideShow
+function runSlideShow(
+  sliders,
+  sliderClass,
+  dots,
+  prevSlide,
+  nextSlide,
+  autoplay = true 
+) {
+  console.warn('dots', dots)
+	let currentSlideIndex = 0
+  let nextSlideIndex
+  let showInterval = null
+  // Hien thi slide dau tien
+  sliders[currentSlideIndex].style.left = 0
+  dots[currentSlideIndex].classList.add("active")
 
+  // Thuc hien hanh dong click vao arrow
+  if (prevSlide && nextSlide) {
+    prevSlide.addEventListener("click", function () {
+      navigateSlide(NAV_ARROW.LEFT)
+    })
+    nextSlide.addEventListener("click", function () {
+      navigateSlide(NAV_ARROW.RIGHT)
+    })
+  }
 
+  const navigateSlide = (navArrow, interval = true) => {
+    nextSlideIndex = getNextSlideIndex(navArrow, sliders, currentSlideIndex)
+    controlInterval(nextSlideIndex, interval, navArrow , false)
+  }
 
+  // Loop dots thuc hien xu ly cho su kien click
+  dots.forEach((element) => {
+    element.addEventListener("click", function () {  
+      const dotIndex = Number(element.getAttribute("name"))
+      controlInterval(dotIndex, true)
+    })
+  })
 
+  const controlInterval = (nextIndex, interval, navArrow, clickDot = true) => {
+    if(interval === true) runClearInterval()
 
+    if(clickDot) { 
+      clickDotShowSlide(nextIndex)
+    } else {
+      controlShowSlides(navArrow)
+    }
 
+    if(interval === true) runSetInterval() 
+
+    currentSlideIndex = nextIndex
+  }
+
+  const clickDotShowSlide = (dotIndex) => {
+    if (
+      (currentSlideIndex === sliders.length - 1 && dotIndex === 0) ||
+      currentSlideIndex < dotIndex
+    ) {
+      controlShowSlides(NAV_ARROW.RIGHT, dotIndex)
+    } else if (
+      (currentSlideIndex === 0 && dotIndex === sliders.length - 1) ||
+      currentSlideIndex > dotIndex
+    ) {
+      controlShowSlides(NAV_ARROW.LEFT, dotIndex)
+    }
+  }
+
+  // Show slide
+  const controlShowSlides = (navArrow, nextIndex = nextSlideIndex) => {
+    showSlides(
+      navArrow,
+      sliders,
+      sliderClass,
+      dots,
+      currentSlideIndex,
+      nextIndex
+    )
+  }
+
+  // Tao ham setInterval chung
+  const runSetInterval = () => {   
+    showInterval = setInterval(() => {
+      navigateSlide(NAV_ARROW.RIGHT, false)
+    }, 2000)
+  }
+
+  // Kiem tra dieu kien autoplay = true se cho chay tu dong. Neu them slide khac khong muon auto thi co the thay doi 
+  if (autoplay) {
+    runSetInterval()
+  }
+
+  // Xoa ham setInterval
+  const runClearInterval = () => {
+    clearInterval(showInterval)
+  }
+}
+
+// Ham xu ly tim nextSlide
+function getNextSlideIndex(navArrow, sliders, currentSlideIndex) {
+	let nextSlideIndex
+	if (navArrow === NAV_ARROW.LEFT) {
+	  if (currentSlideIndex === 0) {
+		nextSlideIndex = sliders.length - 1
+	  } else {
+		nextSlideIndex = currentSlideIndex - 1
+	  }
+	} else if (navArrow === NAV_ARROW.RIGHT) {
+	  if (currentSlideIndex === sliders.length - 1) {
+		nextSlideIndex = 0
+	  } else {
+		nextSlideIndex = currentSlideIndex + 1
+	  }
+	}
+	return nextSlideIndex
+}
