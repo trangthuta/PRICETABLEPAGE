@@ -1,0 +1,19 @@
+.content {
+    padding-top: 125px;
+    background-color: white;
+    padding-bottom: 75px;
+    &-title {
+        font-size: 50px;
+    }
+    &-text {
+        text-align: justify;
+        font-weight: 700;
+        color: $gray-lighter;
+        line-height: 30px;
+    }
+    @media screen and (max-width: 767px) {
+        &-title {
+            font-size: 25px;
+        }
+    }
+}

@@ -1,0 +1,220 @@
+.infopage {
+  background-color: $bg-btnarrow;
+  color: $gray-light;
+  padding: 115px 0 90px 0;
+  text-align: justify;
+  line-height: 25px;
+  a {
+    text-decoration: none;
+    color: $blue-color;
+  }
+  &-tit {
+    color: white;
+    font-size: 19px;
+    font-family: $secondary-font;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  &-tit:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #f50057;
+    border-right: 10px solid transparent;
+    transform: translate(200%, 100%);
+  }
+  &-col {
+    max-width: 261px;
+    height: 705px;
+  }
+  &-colflex {
+    display: flex;
+    flex-direction: column;
+    gap: 50px 0;
+  }
+  &-item {
+    width: 100%;
+  }
+  &-address {
+    padding-bottom: 30px;
+    border-bottom: 1px dashed $gray-light;
+  }
+  &-PM {
+    margin-top: 30px;
+  }
+  &-contact {
+    margin-left: 10px;
+    line-height: 35px;
+  }
+  &-post {
+    border-bottom: 1px dashed $gray-light;
+    padding-bottom: 15px;
+    &-cirlce {
+      background-color: $gray-light;
+      margin-right: 10px;
+    }
+    &-time {
+      color: $blue-color;
+    }
+    &-comment {
+      float: right;
+      color: $gray-light !important;
+    }
+    &-comment:hover {
+      color: $blue-color !important;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0px;
+    }
+    &:nth-child(3),
+    &:nth-child(4) {
+      padding-top: 15px;
+    }
+  }
+  &-linklist {
+    margin-left: 18px;
+    li {
+      border-bottom: 1px dashed $gray-light;
+      line-height: 40px;
+      color: aqua;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+    .list-item {
+      color: $gray-light !important;
+
+      &:hover {
+        color: $blue-color !important;
+      }
+    }
+  }
+  &-input {
+    width: 100%;
+    position: relative;
+    display: block;
+    input {
+      width: 239px;
+      appearance: none;
+      border: none;
+      background-color: #181828;
+      padding: 11.5px;
+      margin-bottom: 15px;
+      color: $gray-light;
+      border: 1px solid #394050;
+      &::placeholder {
+        color: #494a59;
+      }
+      &:focus {
+        outline: none;
+        border: 1px solid $blue-color !important;
+      }
+    }
+    i {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: 0;
+      transform: translate(-12px, 12px);
+    }
+  }
+  &-feedback {
+    input {
+      padding: 11.5px;
+      padding-bottom: 69.5px;
+    }
+  }
+  &-btn {
+    width: 100%;
+    height: 40px;
+    background-color: $blue-dark;
+    border: 1px solid $blue-dark;
+    color: $gray-light;
+    font-family: $secondary-font;
+    font-weight: 700;
+  }
+  &-dot {
+    width: 100%;
+    text-align: center;
+    label {
+      font-weight: bold;
+      padding-right: 15px;
+      &:nth-last-child(1) {
+        padding-right: 0;
+      }
+      &::before {
+        margin: 0 10px;
+      }
+      &::after {
+        width: 15px;
+        height: 15px;
+        background-color: #394050;
+      }
+    }
+    &-active {
+      &::after {
+        background-color: $gray-light !important;
+      }
+    }
+  }
+  &-nextemail {
+    width: 40px;
+    height: 38px;
+    background-color: #394050;
+    transform: translate(3px, 1px) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-subscribe {
+    margin-bottom: 30px;
+  }
+  &-note {
+    font-size: 14px;
+    color: #4a4b5b;
+    span {
+      color: $blue-color;
+    }
+  }
+  .flex-gap {
+    gap: 10px 10px;
+  }
+  .color-cirlce {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    float: left;
+  }
+  .color-square {
+    width: 80px;
+    height: 80px;
+  }
+  .color-1 {
+    background-color: #828e97;
+  }
+  .color-2 {
+    background-color: #5c6973;
+  }
+  .color-3 {
+    background-color: #4b565d;
+  }
+  .color-4 {
+    background-color: #b6c6c9;
+  }
+  .color-5 {
+    background-color: #bcbcbc;
+  }
+  .color-6 {
+    background-color: #5f727f;
+  }
+  .color-7 {
+    background-color: #dfe5e8;
+  }
+}

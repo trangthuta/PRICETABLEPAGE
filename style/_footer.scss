@@ -1,0 +1,83 @@
+.footer {
+  background-color: #181828;
+  color: $gray-light;
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+  a {
+    text-decoration: none;
+  }
+  &-link {
+    color: $blue-color;
+  }
+  &-list {
+    ul > li {
+      list-style: none;
+      float: left;
+      padding: 0 15px;
+      border-right: solid 1px #333146;
+      &:last-child {
+        border-right: none;
+      }
+      a {
+        color: $gray-light;
+      }
+    }
+  }
+  &-icon > a {
+    font-size: 16px;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &-icontwitter {
+    color: $blue-color;
+  }
+  &-iconfacebook {
+    color: #315bd6;
+  }
+  &-iconlinkedin {
+    color: #0288d1;
+  }
+  &-iconinstagram {
+    color: #786f4c;
+  }
+  &-iconyoutube {
+    color: red;
+  }
+  &-icongoogle {
+    color: #d53c33;
+  }
+  &-iconpinterest {
+    color: #ff5757;
+  }
+  &-arrowup {
+    font-size: 24px;
+    padding: 13px 14.5px;
+    background-color: #06060f;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (max-width: 1023px) {
+    &-license {
+      order: 3;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-icon {
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+    }
+    &-list {
+      ul > li {
+        padding: 0 6px;
+      }
+    }
+  }
+}

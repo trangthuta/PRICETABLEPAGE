@@ -1,0 +1,44 @@
+.slide-dark {
+  color: white;
+  background-color: #494b58;
+  padding: 215px 0 195px 0;
+  img {
+    margin-bottom: 65px;
+  }
+  &-tit {
+    font-size: 100px;
+    color: #ececed;
+    font-family: $secondary-font;
+  }
+  &-content {
+    font-size: 24px;
+    text-align: justify;
+    padding: 0 45px;
+    line-height: 40px;
+    letter-spacing: 0.6px;
+    margin-bottom: 50px;
+  }
+  &-button {
+    color: $blue-color;
+    border-color: $blue-color;
+    background-color: #494b58;
+  }
+
+  @media screen and(max-width: 1023px) {
+    &-tit {
+      font-size: 70px;
+    }
+    &-content {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-tit {
+      font-size: 40px;
+    }
+    &-content {
+      font-size: 14px;
+      padding: 0;
+    }
+  }
+}
