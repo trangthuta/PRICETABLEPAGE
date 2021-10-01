@@ -68,7 +68,7 @@
     }
     .active {
       &::after {
-        background-color: $blue-color;
+        background-color: $blue-color !important;
       }
     }
   }
@@ -120,4 +120,21 @@
       }
     }
   }
+  // /slideshow
+  .slideshow {
+    overflow: hidden;
+    position: relative;
+    height: 667px;
+      z-index: 1;
+    &-slide {
+      width: 100%;
+      display: inline-block;
+      z-index: -1;
+      position: absolute;
+      left: 100%;
+      display: none;
+    }
+  }
+
+  
 }

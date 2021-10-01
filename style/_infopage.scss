@@ -1,4 +1,4 @@
-.infopage {
+.infoPage {
   background-color: $bg-btnarrow;
   color: $gray-light;
   padding: 115px 0 90px 0;
@@ -140,7 +140,7 @@
     font-family: $secondary-font;
     font-weight: 700;
   }
-  &-dot {
+  &-dots {
     width: 100%;
     text-align: center;
     label {
@@ -158,10 +158,10 @@
         background-color: #394050;
       }
     }
-    &-active {
-      &::after {
-        background-color: $gray-light !important;
-      }
+  }
+  &-active {
+    &::after {
+      background-color: $gray-light !important;
     }
   }
   &-nextemail {
@@ -217,4 +217,25 @@
   .color-7 {
     background-color: #dfe5e8;
   }
+  &-slideshow {
+    overflow: hidden;
+    position: relative;
+    height: 180px;
+    z-index: 1;
+  }
+  &-slides {
+    width: 100%;
+    display: inline-block;
+    z-index: -1;
+    position: absolute;
+    left: 100%;
+    display: none;
+    &-item {
+          display: inline-block;
+          margin-bottom: 2px;
+          &:nth-child(5) {
+            margin: 3px 7.3px;
+          }
+  }
+}
 }
